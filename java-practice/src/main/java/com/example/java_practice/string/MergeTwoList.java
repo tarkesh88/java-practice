@@ -1,7 +1,5 @@
 package com.example.java_practice.string;
 
-import com.example.java_practice.linkedlist_practice.SingleLinkListNode;
-
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

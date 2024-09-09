@@ -2,9 +2,9 @@ package com.example.java_practice.linkedlist_practice;
 
 public class ReverseLinkedList {
 
-    static SingleLinkListNode reverseList(SingleLinkListNode node) {
+    static Node reverseList(Node node) {
 
-        SingleLinkListNode curt = node, prev = null, next;
+        Node curt = node, prev = null, next;
         while(curt!= null) {
             next = curt.next;
             curt.next = prev;
@@ -18,12 +18,12 @@ public class ReverseLinkedList {
 
         // Create a hard-coded linked list:
         // 10 -> 20 -> 30 -> 40 -> 50 -> 60
-        SingleLinkListNode head = new SingleLinkListNode(10);
-        head.next = new SingleLinkListNode(20);
-        head.next.next = new SingleLinkListNode(30);
-        head.next.next.next = new SingleLinkListNode(40);
-        head.next.next.next.next = new SingleLinkListNode(50);
-        head.next.next.next.next.next = new SingleLinkListNode(60);
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(50);
+        head.next.next.next.next.next = new Node(60);
 
         head = reverseList(head);
         while (head != null) {

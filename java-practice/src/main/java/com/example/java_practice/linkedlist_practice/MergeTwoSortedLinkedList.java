@@ -1,16 +1,14 @@
 package com.example.java_practice.linkedlist_practice;
 
-import com.example.java_practice.stream.Practice;
-
 public class MergeTwoSortedLinkedList {
 
 
-    static SingleLinkListNode mergeLists(SingleLinkListNode a, SingleLinkListNode b) {
+    static Node mergeLists(Node a, Node b) {
         if(a ==null) return b;
         if (b==null) return a;
         // Head and Tail of the merged list
-        SingleLinkListNode head = null;
-        SingleLinkListNode tail = null;
+        Node head = null;
+        Node tail = null;
 
         // Initialize the head and tail pointers
         if (a.data <= b.data) {
@@ -37,16 +35,16 @@ public class MergeTwoSortedLinkedList {
     }
 
     public static void main(String[] args) {
-        SingleLinkListNode a = new SingleLinkListNode(2);
-        a.next = new SingleLinkListNode(4);
-        a.next.next = new SingleLinkListNode(8);
-        a.next.next.next = new SingleLinkListNode(9);
+        Node a = new Node(2);
+        a.next = new Node(4);
+        a.next.next = new Node(8);
+        a.next.next.next = new Node(9);
 
-        SingleLinkListNode b = new SingleLinkListNode(1);
-        b.next = new SingleLinkListNode(3);
-        b.next.next = new SingleLinkListNode(8);
-        b.next.next.next = new SingleLinkListNode(10);
-        SingleLinkListNode res = mergeLists(a, b);
+        Node b = new Node(1);
+        b.next = new Node(3);
+        b.next.next = new Node(8);
+        b.next.next.next = new Node(10);
+        Node res = mergeLists(a, b);
         System.out.println("Merged Linked List is:");
         while (res != null) {
             System.out.print(res.data + " ");
