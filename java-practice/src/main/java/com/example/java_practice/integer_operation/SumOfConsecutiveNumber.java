@@ -1,4 +1,4 @@
-package com.example.java_practice.integeroperation;
+package com.example.java_practice.integer_operation;
 
 public class SumOfConsecutiveNumber {
 

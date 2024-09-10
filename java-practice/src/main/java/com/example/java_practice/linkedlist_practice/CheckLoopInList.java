@@ -2,6 +2,7 @@ package com.example.java_practice.linkedlist_practice;
 
 import java.util.HashSet;
 import java.util.Set;
+import com.example.java_practice.linkedlist_practice.Node;
 
 public class CheckLoopInList {
 
@@ -27,7 +28,7 @@ public class CheckLoopInList {
         head.next.next.next.next = new Node(50);
         head.next.next.next.next.next = new Node(60);
 
-        head.next.next.next.next = head;
+        //head.next.next.next.next = head;
 
         if (detectLoop(head))
             System.out.println("true");
