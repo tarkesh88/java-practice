@@ -13,14 +13,19 @@ public class FindMiddleOfList {
         return length;
     }
     static int getMiddle(Node head) {
-        int length = getLength(head);
+        /*int length = getLength(head);
         int middle = length/2;
         while(middle>0) {
             head = head.next;
             middle--;
+        }*/
+        Node slow = head;
+        Node fast = head;
+        while (fast!=null && fast.next!=null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
-
-        return head.data;
+        return slow.data;
     }
     public static void main(String[] args) {
 
